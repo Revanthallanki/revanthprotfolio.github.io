@@ -1,0 +1,323 @@
+C<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revanth</title>
+    <link rel="shortcut icon" href="lo.png"/>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Include custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-image {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-image:hover {
+            transform: scale(1.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+    <style>
+        .contact-image {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-image:hover {
+            transform: scale(1.5);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: tomato;
+            color: #fff;
+            padding: 1px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .project {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .project-photo {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .btn-more-projects {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: tomato;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .btn-more-projects:hover {
+            background-color: black;
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+
+
+
+
+<body class="bg-white-100">
+
+<!-- HEADER SECTION -->
+
+    <header class="fixed top-0 left-0 w-full bg-black z-50 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-semibold">Revanth Kumar</h1>
+            <button class="block md:hidden" id="menu-toggle">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-2 mr-4">
+                    <li><a href="#home" class="hover:text-yellow-300 ml-2">Home</a></li>
+                    <li><a href="#about" class="hover:text-yellow-300 ml-2">About</a></li>
+                    <li><a href="#projects" class="hover:text-yellow-300 ml-2">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-300 ml-2 mr-8">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <ul class="flex flex-col space-y-2">
+                <li><a href="#home" class="hover:text-yellow-300 ml-4">Home</a></li>
+                <li><a href="#about" class="hover:text-yellow-300 ml-4">About</a></li>
+                <li><a href="#projects" class="hover:text-yellow-300 ml-4">Projects</a></li>
+                <li><a href="#contact" class="hover:text-yellow-300 ml-4">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+<!-- HOME SECTION  -->
+ 
+    <section id="home" class="py-12 flex items-center min-h-screen" style="margin-top: -24px;">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url(https://parental-control.flashget.com/wp-content/uploads/sites/3/2024/02/remote-control-Android-phone-from-PC.webp); opacity: 0.5;"></div>
+
+        <div class="container mx-auto relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mx-auto text-center">
+                    <h1 class="text-3xl font-semibold mb-4 text-center" style="color: tomato; font-size: 250%;" >HAI! I'M REVANTH KUMAR</h1>
+                    <p class="text-center font-semibold mb-8 text-justify md:mb-0">Welcome to my portfolio, where data transforms into insights and decisions through meticulous analysis and strategic interpretation, illuminating pathways for informed action and innovation.</p>
+                    <button class="bg-black hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4" onclick="scrollToAbout()">About Me</button>
+
+                </div> 
+            </div>
+        </div>
+    </section>
+
+<!-- ABOUT SECTION -->
+    
+    <section id="about" class="py-12 flex items-center min-h-screen bg-tomota" style="padding-top: 80px; background-color: tomato;">
+
+
+        <div class="container mx-auto relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mx-auto text-center">
+                    <h2 class="text-3xl font-semibold mb-4" style="opacity: 1.0; align-items: center;">About Me</h2>
+                    <p class="text-white mb-8 text-center md:mb-0" style="opacity: 1.0; align-items: center;">Hello there! I'm Revanth, a passionate data enthusiast with a keen eye for uncovering insights that drive impactful decisions. With a blend of analytical prowess and creative thinking, I navigate through complex datasets to extract meaningful patterns and trends. </p>
+                    <br>
+                    <br>
+                    <p class="text-white mb-8 text-center md:mb-0" style="opacity: 1.0; align-items: center;">As a fresh entrant into the industry, I bring a fresh perspective and a hunger to learn. I'm eager to apply my analytical skills and contribute to meaningful projects that make a difference. Whether it's exploring trends in customer behavior or optimizing processes for efficiency, I'm excited about the endless possibilities that data analysis presents.</p>
+                </div>
+                <div class="md:w-1/2 mt-35 mb-75">
+                    <img src="profile.jpg" alt="Profile Image" class="w-auto h-96 object-cover mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- PROJECT SECTION-->
+
+    <section id="projects" class="py-12 flex items-center min-h-screen">
+        <div class="container mx-auto relative z-10">
+            <h2 class="text-3xl font-semibold mb-4">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-40">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Excel Projects</h3>
+                    <a href="project-1-link" target="_blank">
+                        <img src="excelproject1.png" alt="Project 1 Image" class="w-full h-auto object-cover mb-4 cursor-pointer project-image" onclick="first_project()">
+                    </a>
+
+                    <p class="text-gray-700">This project involves using Excel for data analysis tasks such as cleaning and organizing raw data, performing calculations with formulas, creating pivot tables for summarizing data, and visualizing key metrics with charts and graphs. The goal is to extract meaningful insights and trends from the data to support decision-making processes.</p>
+                    <a href="project1.html" target="_blank" class="btn-more-projects" >More Projects</a>
+                </div>
+
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">SQL Projects</h3>
+                    <a href="project-2-link" target="_blank">
+                        <img src="sqlproject1.png" alt="Project 2 Image" class="w-full h-auto object-cover mb-4 cursor-pointer project-image" onclick="second_project()">
+                    </a>
+                    
+                    <p class="text-gray-700">This project focuses on utilizing SQL for managing and analyzing databases. Key tasks include writing queries to extract and manipulate data, performing data aggregation and filtering, and creating views and stored procedures for efficient data access. The objective is to gain valuable insights from the database, such as identifying patterns, trends, and key metrics.</p>
+                    <a href="project2.html" target="_blank" class="btn-more-projects">More Projects</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Python Projects</h3>
+                    <a href="project-3-link" target="_blank">
+                        <img src="pythonproject1.png" alt="Project 3 Image" class="w-full h-auto object-cover mb-4 cursor-pointer project-image" onclick="third_project()">
+                    </a>
+                    <p class="text-gray-700">This project leverages Python for data analysis and predictive analytics. It encompasses data preprocessing, exploratory data analysis (EDA), and building machine learning models to uncover patterns and make predictions. Techniques such as regression analysis, clustering, and time series forecasting are employed, along with visualization libraries.</p>
+                    <a href="project3.html" target="_blank" class="btn-more-projects">More Projects</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Power BI Projects</h3>
+                    <a href="project-4-link" target="_blank">
+                        <img src="powerbi_project2.png" alt="Project 4 Image" class="w-full h-auto object-cover mb-4 cursor-pointer project-image" onclick="fourth_project()">
+                    </a>
+                    
+                    <p class="text-gray-700">This project involves using Power BI to create interactive and visually appealing dashboards. Tasks include connecting to various data sources, performing data transformation, and designing visualizations to track and analyze key performance indicators (KPIs). The dashboards provide real-time insights and allow for detailed drill-down analysis.</p>
+                    <a href="project4.html" target="_blank" class="btn-more-projects">More Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- CONTACT SECTION -->
+
+    <section id="contact" class="py-12 bg-gray-200 mt-16 md:mt-24 lg:mt-32">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-4 flex justify-center items-center">Contact</h2>
+            <div class="flex justify-center items-center gap-5">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/revanth-kumar-allanki-ba1193264/" target="_blank">
+                    <img src="logo.png" alt="LinkedIn" class="w-8 h-auto cursor-pointer contact-image">
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/Revanthallanki" target="_blank">
+                    <img src="github.png" alt="GitHub" class="w-8 h-auto cursor-pointer contact-image">
+                </a>
+                <!-- Email -->
+                <a href="mailto:revanthallanki@gmail.com">
+                    <img src="gamil.png" alt="Email" class="w-8 h-auto cursor-pointer contact-image">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Include JavaScript for form submission -->
+
+    <!-- FOR ABOUT ME BUTTON -->
+
+    <script>
+        function scrollToAbout() {
+            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+
+
+    <!-- TO OPEN THE PROJECTS -->
+
+
+
+    <script>
+        function first_project() {
+            window.open('project1.html', '_blank');
+        }
+    </script>
+
+
+    <script>
+        function second_project() {
+            window.open('project2.html', '_blank');
+        }
+    </script>
+
+    <script>
+        function third_project() {
+            window.open('project3.html', '_blank');
+        }
+    </script>
+
+    <script>
+        function fourth_project() {
+            window.open('project4.html', '_blank');
+        }
+    </script>
+
+
+
+
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // You can add your form submission logic here
+            alert("Form submitted successfully!");
+            // Clear form fields after submission if needed
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

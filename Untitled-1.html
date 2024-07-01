@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Analysis Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        .chart-container {
+            position: relative;
+            margin: 20px auto;
+            height: 400px;
+            width: 80%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sales Analysis Project</h1>
+    </header>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Welcome to our Sales Analysis Project. This project analyzes the sales data of our company to uncover trends and insights that can help drive business decisions.</p>
+    </section>
+
+    <section id="summary">
+        <h2>Summary</h2>
+        <p>Here, we present a summary of the key findings from our sales analysis.</p>
+    </section>
+
+    <section id="charts">
+        <h2>Sales Data Visualizations</h2>
+        <div class="chart-container">
+            <canvas id="salesChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="regionChart"></canvas>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sales Analysis Project</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Data for Sales Chart
+            const salesData = {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Monthly Sales',
+                    data: [300, 500, 400, 700, 800, 600, 700],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            };
+
+            // Data for Regional Sales Chart
+            const regionData = {
+                labels: ['North', 'South', 'East', 'West'],
+                datasets: [{
+                    label: 'Sales by Region',
+                    data: [1200, 1500, 1000, 800],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+
+            // Config for Sales Chart
+            const salesConfig = {
+                type: 'line',
+                data: salesData,
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            };
+
+            // Config for Regional Sales Chart
+            const regionConfig = {
+                type: 'bar',
+                data: regionData,
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            };
+
+            // Render the Sales Chart
+            const salesChart = new Chart(
+                document.getElementById('salesChart'),
+                salesConfig
+            );
+
+            // Render the Regional Sales Chart
+            const regionChart = new Chart(
+                document.getElementById('regionChart'),
+                regionConfig
+            );
+        });
+    </script>
+</body>
+</html>
